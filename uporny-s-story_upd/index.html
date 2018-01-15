@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Uporny&#39;s Story | Magazine Articles | WWF</title>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    (window.NREUM || (NREUM = {})).loader_config = {
+      xpid: "UwMEVFZRGwAGXFlRDgc="
+    };
+    window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) {
+      function r(n) {
+        if (!e[n]) {
+          var o = e[n] = {
+            exports: {}
+          };
+          t[n][0].call(o.exports, function (e) {
+            var o = t[n][1][e];
+            return r(o || e)
+          }, o, o.exports)
+        }
+        return e[n].exports
+      }
+      if ("function" == typeof __nr_require) return __nr_require;
+      for (var o = 0; o < n.length; o++) r(n[o]);
+      return r
+    }({
+      1: [function (t, e, n) {
+        function r(t) {
+          try {
+            c.console && console.log(t)
+          } catch (e) {}
+        }
+        var o, i = t("ee"),
+          a = t(12),
+          c = {};
+        try {
+          o = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (c.console = !
+            0, o.indexOf("dev") !== -1 && (c.dev = !0), o.indexOf("nr_dev") !== -1 && (c.nrDev = !0))
+        } catch (s) {}
+        c.nrDev && i.on("internal-error", function (t) {
+          r(t.stack)
+        }), c.dev && i.on("fn-err", function (t, e, n) {
+          r(n.stack)
+        }), c.dev && (r("NR AGENT IN DEVELOPMENT MODE"), r("flags: " + a(c, function (t, e) {
+          return t
+        }).join(", ")))
+      }, {}],
+      2: [function (t, e, n) {
+        function r(t, e, n, r, c) {
+          try {
+            p ? p -= 1 : o(c || new UncaughtException(t, e, n), !0)
+          } catch (f) {
+            try {
+              i("ierr", [f, s.now(), !0])
+            } catch (d) {}
+          }
+          return "function" == typeof u && u.apply(this, a(arguments))
+        }
+
+        function UncaughtException(t, e, n) {
+          this.message = t || "Uncaught error with no additional information", this.sourceURL = e, this.line =
+            n
+        }
+
+        function o(t, e) {
+          var n = e ? null : s.now();
+          i("err", [t, n])
+        }
+        var i = t("handle"),
+          a = t(13),
+          c = t("ee"),
+          s = t("loader"),
+          f = t("gos"),
+          u = window.onerror,
+          d = !1,
+          l = "nr@seenError",
+          p = 0;
+        s.features.err = !0, t(1), window.onerror = r;
+        try {
+          throw new Error
+        } catch (h) {
+          "stack" in h && (t(5), t(4), "addEventListener" in window && t(3), s.xhrWrappable && t(6), d = !0)
+        }
+        c.on("fn-start", function (t, e, n) {
+          d && (p += 1)
+        }), c.on("fn-err", function (t, e, n) {
+          d && !n[l] && (f(n, l, function () {
+            return !0
+          }), this.thrown = !0, o(n))
+        }), c.on("fn-end", function () {
+          d && !this.thrown && p > 0 && (p -= 1)
+        }), c.on("internal-error", function (t) {
+          i("ierr", [t, s.now(), !0])
+        })
+      }, {}],
+      3: [function (t, e, n) {
+        function r(t) {
+          for (var e = t; e && !e.hasOwnProperty(u);) e = Object.getPrototypeOf(e);
+          e && o(e)
+        }
+
+        function o(t) {
+          c.inPlace(t, [u, d], "-", i)
+        }
+
+        function i(t, e) {
+          return t[1]
+        }
+        var a = t("ee").get("events"),
+          c = t(15)(a, !0),
+          s = t("gos"),
+          f = XMLHttpRequest,
+          u = "addEventListener",
+          d = "removeEventListener";
+        e.exports = a, "getPrototypeOf" in Object ? (r(document), r(window), r(f.prototype)) : f.prototype.hasOwnProperty(
+          u) && (o(window), o(f.prototype)), a.on(u + "-start", function (t, e) {
+          var n = t[1],
+            r = s(n, "nr@wrapped", function () {
+              function t() {
+                if ("function" == typeof n.handleEvent) return n.handleEvent.apply(n, arguments)
+              }
+              var e = {
+                object: t,
+                "function": n
+              }[typeof n];
+              return e ? c(e, "fn-", null, e.name || "anonymous") : n
+            });
+          this.wrapped = t[1] = r
+        }), a.on(d + "-start", function (t) {
+          t[1] = this.wrapped || t[1]
+        })
+      }, {}],
+      4: [function (t, e, n) {
+        var r = t("ee").get("raf"),
+          o = t(15)(r),
+          i = "equestAnimationFrame";
+        e.exports = r, o.inPlace(window, ["r" + i, "mozR" + i, "webkitR" + i, "msR" + i], "raf-"), r.on(
+          "raf-start",
+          function (t) {
+            t[0] = o(t[0], "fn-")
+          })
+      }, {}],
+      5: [function (t, e, n) {
+        function r(t, e, n) {
+          t[0] = a(t[0], "fn-", null, n)
+        }
+
+        function o(t, e, n) {
+          this.method = n, this.timerDuration = isNaN(t[1]) ? 0 : +t[1], t[0] = a(t[0], "fn-", this, n)
+        }
+        var i = t("ee").get("timer"),
+          a = t(15)(i),
+          c = "setTimeout",
+          s = "setInterval",
+          f = "clearTimeout",
+          u = "-start",
+          d = "-";
+        e.exports = i, a.inPlace(window, [c, "setImmediate"], c + d), a.inPlace(window, [s], s + d), a.inPlace(
+          window, [f, "clearImmediate"], f + d), i.on(s + u, r), i.on(c + u, o)
+      }, {}],
+      6: [function (t, e, n) {
+        function r(t, e) {
+          d.inPlace(e, ["onreadystatechange"], "fn-", c)
+        }
+
+        function o() {
+          var t = this,
+            e = u.context(t);
+          t.readyState > 3 && !e.resolved && (e.resolved = !0, u.emit("xhr-resolved", [], t)), d.inPlace(t, w,
+            "fn-", c)
+        }
+
+        function i(t) {
+          g.push(t), h && (b ? b.then(a) : v ? v(a) : (E = -E, O.data = E))
+        }
+
+        function a() {
+          for (var t = 0; t < g.length; t++) r([], g[t]);
+          g.length && (g = [])
+        }
+
+        function c(t, e) {
+          return e
+        }
+
+        function s(t, e) {
+          for (var n in t) e[n] = t[n];
+          return e
+        }
+        t(3);
+        var f = t("ee"),
+          u = f.get("xhr"),
+          d = t(15)(u),
+          l = NREUM.o,
+          p = l.XHR,
+          h = l.MO,
+          m = l.PR,
+          v = l.SI,
+          y = "readystatechange",
+          w = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"],
+          g = [];
+        e.exports = u;
+        var x = window.XMLHttpRequest = function (t) {
+          var e = new p(t);
+          try {
+            u.emit("new-xhr", [e], e), e.addEventListener(y, o, !1)
+          } catch (n) {
+            try {
+              u.emit("internal-error", [n])
+            } catch (r) {}
+          }
+          return e
+        };
+        if (s(p, x), x.prototype = p.prototype, d.inPlace(x.prototype, ["open", "send"], "-xhr-", c), u.on(
+            "send-xhr-start",
+            function (t, e) {
+              r(t, e), i(e)
+            }), u.on("open-xhr-start", r), h) {
+          var b = m && m.resolve();
+          if (!v && !m) {
+            var E = 1,
+              O = document.createTextNode(E);
+            new h(a).observe(O, {
+              characterData: !0
+            })
+          }
+        } else f.on("fn-end", function (t) {
+          t[0] && t[0].type === y || a()
+        })
+      }, {}],
+      7: [function (t, e, n) {
+        function r(t) {
+          var e = this.params,
+            n = this.metrics;
+          if (!this.ended) {
+            this.ended = !0;
+            for (var r = 0; r < d; r++) t.removeEventListener(u[r], this.listener, !1);
+            if (!e.aborted) {
+              if (n.duration = a.now() - this.startTime, 4 === t.readyState) {
+                e.status = t.status;
+                var i = o(t, this.lastSize);
+                if (i && (n.rxSize = i), this.sameOrigin) {
+                  var s = t.getResponseHeader("X-NewRelic-App-Data");
+                  s && (e.cat = s.split(", ").pop())
+                }
+              } else e.status = 0;
+              n.cbTime = this.cbTime, f.emit("xhr-done", [t], t), c("xhr", [e, n, this.startTime])
+            }
+          }
+        }
+
+        function o(t, e) {
+          var n = t.responseType;
+          if ("json" === n && null !== e) return e;
+          var r = "arraybuffer" === n || "blob" === n || "json" === n ? t.response : t.responseText;
+          return h(r)
+        }
+
+        function i(t, e) {
+          var n = s(e),
+            r = t.params;
+          r.host = n.hostname + ":" + n.port, r.pathname = n.pathname, t.sameOrigin = n.sameOrigin
+        }
+        var a = t("loader");
+        if (a.xhrWrappable) {
+          var c = t("handle"),
+            s = t(8),
+            f = t("ee"),
+            u = ["load", "error", "abort", "timeout"],
+            d = u.length,
+            l = t("id"),
+            p = t(11),
+            h = t(10),
+            m = window.XMLHttpRequest;
+          a.features.xhr = !0, t(6), f.on("new-xhr", function (t) {
+            var e = this;
+            e.totalCbs = 0, e.called = 0, e.cbTime = 0, e.end = r, e.ended = !1, e.xhrGuids = {}, e.lastSize =
+              null, p && (p > 34 || p < 10) || window.opera || t.addEventListener("progress", function (t) {
+                e.lastSize = t.loaded
+              }, !1)
+          }), f.on("open-xhr-start", function (t) {
+            this.params = {
+              method: t[0]
+            }, i(this, t[1]), this.metrics = {}
+          }), f.on("open-xhr-end", function (t, e) {
+            "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && e.setRequestHeader(
+              "X-NewRelic-ID", NREUM.loader_config.xpid)
+          }), f.on("send-xhr-start", function (t, e) {
+            var n = this.metrics,
+              r = t[0],
+              o = this;
+            if (n && r) {
+              var i = h(r);
+              i && (n.txSize = i)
+            }
+            this.startTime = a.now(), this.listener = function (t) {
+              try {
+                "abort" === t.type && (o.params.aborted = !0), ("load" !== t.type || o.called === o.totalCbs &&
+                  (o.onloadCalled || "function" != typeof e.onload)) && o.end(e)
+              } catch (n) {
+                try {
+                  f.emit("internal-error", [n])
+                } catch (r) {}
+              }
+            };
+            for (var c = 0; c < d; c++) e.addEventListener(u[c], this.listener, !1)
+          }), f.on("xhr-cb-time", function (t, e, n) {
+            this.cbTime += t, e ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs ||
+              !this.onloadCalled && "function" == typeof n.onload || this.end(n)
+          }), f.on("xhr-load-added", function (t, e) {
+            var n = "" + l(t) + !!e;
+            this.xhrGuids && !this.xhrGuids[n] && (this.xhrGuids[n] = !0, this.totalCbs += 1)
+          }), f.on("xhr-load-removed", function (t, e) {
+            var n = "" + l(t) + !!e;
+            this.xhrGuids && this.xhrGuids[n] && (delete this.xhrGuids[n], this.totalCbs -= 1)
+          }), f.on("addEventListener-end", function (t, e) {
+            e instanceof m && "load" === t[0] && f.emit("xhr-load-added", [t[1], t[2]], e)
+          }), f.on("removeEventListener-end", function (t, e) {
+            e instanceof m && "load" === t[0] && f.emit("xhr-load-removed", [t[1], t[2]], e)
+          }), f.on("fn-start", function (t, e, n) {
+            e instanceof m && ("onload" === n && (this.onload = !0), ("load" === (t[0] && t[0].type) ||
+              this.onload) && (this.xhrCbStart = a.now()))
+          }), f.on("fn-end", function (t, e) {
+            this.xhrCbStart && f.emit("xhr-cb-time", [a.now() - this.xhrCbStart, this.onload, e], e)
+          })
+        }
+      }, {}],
+      8: [function (t, e, n) {
+        e.exports = function (t) {
+          var e = document.createElement("a"),
+            n = window.location,
+            r = {};
+          e.href = t, r.port = e.port;
+          var o = e.href.split("://");
+          !r.port && o[1] && (r.port = o[1].split("/")[0].split("@").pop().split(":")[1]), r.port && "0" !==
+            r.port || (r.port = "https" === o[0] ? "443" : "80"), r.hostname = e.hostname || n.hostname, r.pathname =
+            e.pathname, r.protocol = o[0], "/" !== r.pathname.charAt(0) && (r.pathname = "/" + r.pathname);
+          var i = !e.protocol || ":" === e.protocol || e.protocol === n.protocol,
+            a = e.hostname === document.domain && e.port === n.port;
+          return r.sameOrigin = i && (!e.hostname || a), r
+        }
+      }, {}],
+      9: [function (t, e, n) {
+        function r() {}
+
+        function o(t, e, n) {
+          return function () {
+            return i(t, [f.now()].concat(c(arguments)), e ? null : this, n), e ? void 0 : this
+          }
+        }
+        var i = t("handle"),
+          a = t(12),
+          c = t(13),
+          s = t("ee").get("tracer"),
+          f = t("loader"),
+          u = NREUM;
+        "undefined" == typeof window.newrelic && (newrelic = u);
+        var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace",
+            "inlineHit", "addRelease"
+          ],
+          l = "api-",
+          p = l + "ixn-";
+        a(d, function (t, e) {
+            u[e] = o(l + e, !0, "api")
+          }), u.addPageAction = o(l + "addPageAction", !0), u.setCurrentRouteName = o(l + "routeName", !0), e.exports =
+          newrelic, u.interaction = function () {
+            return (new r).get()
+          };
+        var h = r.prototype = {
+          createTracer: function (t, e) {
+            var n = {},
+              r = this,
+              o = "function" == typeof e;
+            return i(p + "tracer", [f.now(), t, n], r),
+              function () {
+                if (s.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
+                  return e.apply(this, arguments)
+                } catch (t) {
+                  throw s.emit("fn-err", [arguments, this, t], n), t
+                } finally {
+                  s.emit("fn-end", [f.now()], n)
+                }
+              }
+          }
+        };
+        a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) {
+          h[e] = o(p + e)
+        }), newrelic.noticeError = function (t) {
+          "string" == typeof t && (t = new Error(t)), i("err", [t, f.now()])
+        }
+      }, {}],
+      10: [function (t, e, n) {
+        e.exports = function (t) {
+          if ("string" == typeof t && t.length) return t.length;
+          if ("object" == typeof t) {
+            if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength;
+            if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size;
+            if (!("undefined" != typeof FormData && t instanceof FormData)) try {
+              return JSON.stringify(t).length
+            } catch (e) {
+              return
+            }
+          }
+        }
+      }, {}],
+      11: [function (t, e, n) {
+        var r = 0,
+          o = navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);
+        o && (r = +o[1]), e.exports = r
+      }, {}],
+      12: [function (t, e, n) {
+        function r(t, e) {
+          var n = [],
+            r = "",
+            i = 0;
+          for (r in t) o.call(t, r) && (n[i] = e(r, t[r]), i += 1);
+          return n
+        }
+        var o = Object.prototype.hasOwnProperty;
+        e.exports = r
+      }, {}],
+      13: [function (t, e, n) {
+        function r(t, e, n) {
+          e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+          for (var r = -1, o = n - e || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = t[e + r];
+          return i
+        }
+        e.exports = r
+      }, {}],
+      14: [function (t, e, n) {
+        e.exports = {
+          exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" !=
+            typeof window.performance.timing.navigationStart
+        }
+      }, {}],
+      15: [function (t, e, n) {
+        function r(t) {
+          return !(t && t instanceof Function && t.apply && !t[a])
+        }
+        var o = t("ee"),
+          i = t(13),
+          a = "nr@original",
+          c = Object.prototype.hasOwnProperty,
+          s = !1;
+        e.exports = function (t, e) {
+          function n(t, e, n, o) {
+            function nrWrapper() {
+              var r, a, c, s;
+              try {
+                a = this, r = i(arguments), c = "function" == typeof n ? n(r, a) : n || {}
+              } catch (f) {
+                l([f, "", [r, a, o], c])
+              }
+              u(e + "start", [r, a, o], c);
+              try {
+                return s = t.apply(a, r)
+              } catch (d) {
+                throw u(e + "err", [r, a, d], c), d
+              } finally {
+                u(e + "end", [r, a, s], c)
+              }
+            }
+            return r(t) ? t : (e || (e = ""), nrWrapper[a] = t, d(t, nrWrapper), nrWrapper)
+          }
+
+          function f(t, e, o, i) {
+            o || (o = "");
+            var a, c, s, f = "-" === o.charAt(0);
+            for (s = 0; s < e.length; s++) c = e[s], a = t[c], r(a) || (t[c] = n(a, f ? c + o : o, i, c))
+          }
+
+          function u(n, r, o) {
+            if (!s || e) {
+              var i = s;
+              s = !0;
+              try {
+                t.emit(n, r, o, e)
+              } catch (a) {
+                l([a, n, r, o])
+              }
+              s = i
+            }
+          }
+
+          function d(t, e) {
+            if (Object.defineProperty && Object.keys) try {
+              var n = Object.keys(t);
+              return n.forEach(function (n) {
+                Object.defineProperty(e, n, {
+                  get: function () {
+                    return t[n]
+                  },
+                  set: function (e) {
+                    return t[n] = e, e
+                  }
+                })
+              }), e
+            } catch (r) {
+              l([r])
+            }
+            for (var o in t) c.call(t, o) && (e[o] = t[o]);
+            return e
+          }
+
+          function l(e) {
+            try {
+              t.emit("internal-error", e)
+            } catch (n) {}
+          }
+          return t || (t = o), n.inPlace = f, n.flag = a, n
+        }
+      }, {}],
+      ee: [function (t, e, n) {
+        function r() {}
+
+        function o(t) {
+          function e(t) {
+            return t && t instanceof r ? t : t ? s(t, c, i) : i()
+          }
+
+          function n(n, r, o, i) {
+            if (!l.aborted || i) {
+              t && t(n, r, o);
+              for (var a = e(o), c = h(n), s = c.length, f = 0; f < s; f++) c[f].apply(a, r);
+              var d = u[w[n]];
+              return d && d.push([g, n, r, a]), a
+            }
+          }
+
+          function p(t, e) {
+            y[t] = h(t).concat(e)
+          }
+
+          function h(t) {
+            return y[t] || []
+          }
+
+          function m(t) {
+            return d[t] = d[t] || o(n)
+          }
+
+          function v(t, e) {
+            f(t, function (t, n) {
+              e = e || "feature", w[n] = e, e in u || (u[e] = [])
+            })
+          }
+          var y = {},
+            w = {},
+            g = {
+              on: p,
+              emit: n,
+              get: m,
+              listeners: h,
+              context: e,
+              buffer: v,
+              abort: a,
+              aborted: !1
+            };
+          return g
+        }
+
+        function i() {
+          return new r
+        }
+
+        function a() {
+          (u.api || u.feature) && (l.aborted = !0, u = l.backlog = {})
+        }
+        var c = "nr@context",
+          s = t("gos"),
+          f = t(12),
+          u = {},
+          d = {},
+          l = e.exports = o();
+        l.backlog = u
+      }, {}],
+      gos: [function (t, e, n) {
+        function r(t, e, n) {
+          if (o.call(t, e)) return t[e];
+          var r = n();
+          if (Object.defineProperty && Object.keys) try {
+            return Object.defineProperty(t, e, {
+              value: r,
+              writable: !0,
+              enumerable: !1
+            }), r
+          } catch (i) {}
+          return t[e] = r, r
+        }
+        var o = Object.prototype.hasOwnProperty;
+        e.exports = r
+      }, {}],
+      handle: [function (t, e, n) {
+        function r(t, e, n, r) {
+          o.buffer([t], r), o.emit(t, e, n)
+        }
+        var o = t("ee").get("handle");
+        e.exports = r, r.ee = o
+      }, {}],
+      id: [function (t, e, n) {
+        function r(t) {
+          var e = typeof t;
+          return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, i, function () {
+            return o++
+          })
+        }
+        var o = 1,
+          i = "nr@id",
+          a = t("gos");
+        e.exports = r
+      }, {}],
+      loader: [function (t, e, n) {
+        function r() {
+          if (!b++) {
+            var t = x.info = NREUM.info,
+              e = l.getElementsByTagName("script")[0];
+            if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort();
+            f(w, function (e, n) {
+              t[e] || (t[e] = n)
+            }), s("mark", ["onload", a() + x.offset], null, "api");
+            var n = l.createElement("script");
+            n.src = "https://" + t.agent, e.parentNode.insertBefore(n, e)
+          }
+        }
+
+        function o() {
+          "complete" === l.readyState && i()
+        }
+
+        function i() {
+          s("mark", ["domContent", a() + x.offset], null, "api")
+        }
+
+        function a() {
+          return E.exists && performance.now ? Math.round(performance.now()) : (c = Math.max((new Date).getTime(),
+            c)) - x.offset
+        }
+        var c = (new Date).getTime(),
+          s = t("handle"),
+          f = t(12),
+          u = t("ee"),
+          d = window,
+          l = d.document,
+          p = "addEventListener",
+          h = "attachEvent",
+          m = d.XMLHttpRequest,
+          v = m && m.prototype;
+        NREUM.o = {
+          ST: setTimeout,
+          SI: d.setImmediate,
+          CT: clearTimeout,
+          XHR: m,
+          REQ: d.Request,
+          EV: d.Event,
+          PR: d.Promise,
+          MO: d.MutationObserver
+        };
+        var y = "" + location,
+          w = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            agent: "js-agent.newrelic.com/nr-1071.min.js"
+          },
+          g = m && v && v[p] && !/CriOS/.test(navigator.userAgent),
+          x = e.exports = {
+            offset: c,
+            now: a,
+            origin: y,
+            features: {},
+            xhrWrappable: g
+          };
+        t(9), l[p] ? (l[p]("DOMContentLoaded", i, !1), d[p]("load", r, !1)) : (l[h]("onreadystatechange", o), d[
+          h]("onload", r)), s("mark", ["firstbyte", c], null, "api");
+        var b = 0,
+          E = t(14)
+      }, {}]
+    }, {}, ["loader", 2, 7]);
+  </script>
+  <meta name="robots" content="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="https://www.worldwildlife.org/magazine/issues/winter-2017/articles/uporny-s-story">
+  <meta property="og:image" content="http://assets.worldwildlife.org/photos/14486/images/story_full_width/Web_Uporny_4_Panel3_copy.jpg?1508534599">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="896">
+  <meta property="og:title" content="Uporny&#39;s Story">
+  <meta property="og:site_name" content="World Wildlife Fund">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.worldwildlife.org/magazine/issues/winter-2017/articles/uporny-s-story">
+  <meta name="twitter:image" content="http://assets.worldwildlife.org/photos/14486/images/story_full_width/Web_Uporny_4_Panel3_copy.jpg?1508534599">
+  <meta name="twitter:title" content="Uporny&#39;s Story">
+  <meta name="twitter:site" content="@world_wildlife">
+  <meta name="twitter:site:id" content="16029780">
+  <meta name="description" content="Captured after close encounters with humans, Uporny the tiger was rehabilitated and released, offering researchers an unprecedented look into the wild life of an elusive big cat.">
+  <meta property="og:description" content="Captured after close encounters with humans, Uporny the tiger was rehabilitated and released, offering researchers an unprecedented look into the wild life of an elusive big cat.">
+  <meta name="twitter:description" content="Captured after close encounters with humans, Uporny the tiger was rehabilitated and released, offering researchers an unprecedented look into the wild life of an elusive big cat.">
+
+  <link rel="stylesheet" media="screen" href="assets/style01.css"
+  />
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="Cs4ILxxVES904udKTA+QZmZ87R3H/PoLRkZEoBI8m8NzGcAT5La4VaploOxEVg5eflJaO2Zr5hd9dGRK0tmUMQ=="
+  />
+  <script src="assets/header.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="google-site-verification" content="5Xsbfjlv4FIZ6v_GWak8W3vx-haqUaMYureDmZY8QUU" />
+  <script>
+    var _vwo_code = (function () {
+      var account_id = 23273,
+        settings_tolerance = 2000,
+        library_tolerance = 1500,
+        use_existing_jquery = false,
+
+        f = false,
+        d = document;
+      return {
+        use_existing_jquery: function () {
+          return use_existing_jquery;
+        },
+        library_tolerance: function () {
+          return library_tolerance;
+        },
+        finish: function () {
+          if (!f) {
+            f = true;
+            var a = d.getElementById('_vis_opt_path_hides');
+            if (a) a.parentNode.removeChild(a);
+          }
+        },
+        finished: function () {
+          return f;
+        },
+        load: function (a) {
+          var b = d.createElement('script');
+          b.src = a;
+          b.type = 'text/javascript';
+          b.innerText;
+          b.onerror = function () {
+            _vwo_code.finish();
+          };
+          d.getElementsByTagName('head')[0].appendChild(b);
+        },
+        init: function () {
+          settings_timer = setTimeout('_vwo_code.finish()', settings_tolerance);
+          this.load('//dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) +
+            '&r=' + Math.random());
+          var a = d.createElement('style'),
+            b = 'body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',
+            h = d.getElementsByTagName('head')[0];
+          a.setAttribute('id', '_vis_opt_path_hides');
+          a.setAttribute('type', 'text/css');
+          if (a.styleSheet) a.styleSheet.cssText = b;
+          else a.appendChild(d.createTextNode(b));
+          h.appendChild(a);
+          return settings_timer;
+        }
+      };
+    }());
+    _vwo_settings_timer = _vwo_code.init();
+  </script>
+</head>
+
+<body data-features="slider map socialShareDynamic howToHelp storyTags blockTracking cardGroup">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W98N8C" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script>
+    dataLayer = []
+  </script>
+
+  <!--[if lt IE 9]>
+  <style>
+    .ie-old-browser-notification #box {
+      background-color:#f6f5f2;
+      padding: 10px;
+      margin: 15px;
+    }
+    .ie-old-browser-notification #text {
+      max-width: 230px;
+      float: left;
+    }
+    .ie-old-browser-notification .content {
+      padding-top: 20px;
+    }
+  </style>
+
+    <div class = "wrapper gutter-vert-in ie-old-browser-notification">
+    <div id = "box">
+      <button class="push-right close"><i class="ico" aria-hidden="true">k</i></button>
+      <div class = "content">
+        <div id = "text">
+          <h2 class = "gutter-vert-in">Sorry! Our website may not look great in your internet browser.</h2>
+          <p class = "gutter-bottom-2">For the best experience, please follow the links below to update your preferred internet browser.</p>
+        </div>
+        <ul class="row card-group gutter-bottom-4" id = "list">
+          <li class = "card span2">
+            <a href = "https://www.google.com/chrome/">
+              <div class = "figure"><img src="/assets/structure/unique/chrome_logo.png" alt = "google chrome logo"></div>
+              <div class = "content">
+                <strong class = "name">Google Chrome</strong>
+              </div>
+            </a>
+          </li>
+          <li class = "card span2">
+            <a href = "https://www.mozilla.org/en-US/firefox/new/?utm_source=firefox-com&utm_medium=referral">
+              <div class = "figure"><img src="/assets/structure/unique/firefox-logo.png" alt = "mozilla firefox logo"></div>
+              <div class = "content">
+                <strong class = "name">Mozilla Firefox</strong>
+              </div>
+            </a>
+          </li>
+          <li class = "card span2">
+            <a href="https://www.apple.com/safari/">
+              <div class = "figure"><img src="/assets/structure/unique/safarilogo.jpg" alt = "safari logo"></div>
+              <div class = "content">
+                <strong class = "name">Safari</strong>
+              </div>
+            </a>
+          </li>
+          <li class = "card span2">
+            <a href="https://support.microsoft.com/en-us/help/17621/internet-explorer-downloads">
+              <div class = "figure"><img src="/assets/structure/unique/ie.png" alt = "internet explorer logo"></div>
+              <div class = "content">
+                <strong class = "name">Internet Explorer</strong>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <![endif]-->
+  <div id="content">
+
+    <div class="wrapper">
+      <div class="gutter-horiz-in gutter-top-in-3 gutter-bottom-in-3">
+        <h1 class="hdr-page">Uporny&#39;s Story</h1>
+        <h2 class="hdr-page">Captured after close encounters with humans, Uporny the tiger was rehabilitated and released, offering researchers
+          an unprecedented look into the wild life of an elusive big cat.</h2>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <style>
+            .wrapper .row.list-bordered.list-vertical-bordered-items.list-data.gutter-top-fixed-4 {
+              margin-top: 0;
+            }
+
+            .wrapper .row.list-bordered.list-vertical-bordered-items.list-data.gutter-top-fixed-4 li {
+              min-height: 0;
+            }
+
+            canvas {
+              z-index: 1;
+              position: absolute;
+            }
+
+            .no-scroll {
+              overflow: hidden;
+              height: 100%;
+              position: fixed;
+              width: 100%;
+            }
+
+            #panel1_scene1-layer2 {
+              top: 32px;
+            }
+
+            #panel1_scene5-layer2 img,
+            #panel1_scene5-layer1 img {
+              transform-origin: right top;
+            }
+            /*#panel2_scene1 .layer img {
+	transform: matrix(1, 0, 0, 1, 170, 0);
+}*/
+
+            #uporny-territory {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              width: 35%;
+            }
+
+            #panel1_scene2 .text2 {
+              top: 46%;
+            }
+
+            #panel1_scene3 .text2 {
+              top: 35%;
+            }
+
+            #panel1_scene5 .text2 {
+              top: 21%;
+            }
+
+
+            #panel1_scene3 .text3 {
+              bottom: 9%;
+              left: 79%;
+            }
+
+            #panel2_scene1 .text2 {
+              top: 31%;
+              left: 10%;
+            }
+
+            #panel2_scene4 .text1 {
+              width: 350px;
+            }
+
+            #panel2_scene4 .text2 {
+              top: 57%;
+            }
+
+            #panel2_scene5 .text2 {
+              top: 43%;
+            }
+
+            #panel2_scene5 .text3 {
+              left: auto;
+              right: 2%;
+              bottom: 38%;
+            }
+
+            #panel2_scene5 .text4 {
+              left: auto;
+              right: 2%;
+              bottom: 5%;
+            }
+
+            #panel2_scene7 .text2 {
+              top: 18%;
+            }
+
+            #panel2_scene7 .text3 {
+              bottom: 5%;
+            }
+
+            #panel3_scene1 .text2 {
+              top: 36%;
+            }
+
+            #panel3_scene1 .text3 {
+              left: inherit;
+              right: 5%;
+              bottom: 8%;
+            }
+
+            #panel3_scene3 .text2 {
+              top: 34%;
+            }
+
+            #panel3_scene6 .text2 {
+              top: 27%;
+            }
+
+            #panel4_scene1 .text2 {
+              top: 35%;
+            }
+
+            #panel4_scene2 .text2 {
+              top: 19%;
+            }
+
+            #panel4_scene3 .text2 {
+              top: 23%;
+            }
+
+            #panel4_scene3 .text3 {
+              left: auto;
+              right: 5%;
+              bottom: 31%;
+            }
+
+            #panel4_scene3 .text4 {
+              left: auto;
+              right: 5%;
+              bottom: 16%;
+            }
+
+            #panel4_scene3 .text5 {
+              left: auto;
+              right: 5%;
+              bottom: 5%;
+            }
+
+            #panel4_scene4 .text2 {
+              top: 24%;
+            }
+
+            .panel-container {
+              position: relative;
+              overflow: hidden;
+            }
+
+            .panel-container img {
+              width: 100%;
+            }
+
+            .panel-container:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            .layer {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+            }
+
+            .layer img {
+              width: 100%;
+            }
+
+            .image-container {
+              position: relative;
+              background-position: center center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              width: 100%;
+            }
+
+            .text {
+              position: absolute;
+              width: 250px;
+              left: 2%;
+              background-color: white;
+              border: 2px solid black;
+              padding: 10px;
+              z-index: 1;
+            }
+
+            .text p {
+              margin-bottom: 0;
+            }
+
+            .text1 {
+              top: 5%;
+            }
+
+            .uporny-map__map_image {
+              width: 100%;
+            }
+
+            .uporny-map .text2 {
+              top: 23%;
+            }
+
+            .uporny-map .text3 {
+              right: 5%;
+              bottom: 23%;
+              left: inherit;
+            }
+
+            .uporny-map .text4 {
+              right: 5%;
+              bottom: 8%;
+              left: inherit;
+            }
+
+            .globe {
+              position: absolute;
+              top: -7%;
+              right: -2%;
+            }
+
+            .dog .text {
+              position: relative;
+              width: 100%;
+              top: auto;
+              left: auto;
+              margin-top: 10px;
+            }
+
+            .center-panel .text2 {
+              bottom: 5%;
+            }
+
+            .nav-fixed {
+              background: #fff;
+              background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+              background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+              background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+              background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            }
+
+            @media only screen and (max-width: 1100px) {
+              #panel1_scene3 .text3 {
+                bottom: auto;
+                left: auto;
+              }
+
+              #panel2_scene5 .text3,
+              #panel2_scene5 .text4,
+              .uporny-map .text3,
+              .uporny-map .text4,
+              #panel3_scene1 .text3,
+              #panel4_scene3 .text3,
+              #panel4_scene3 .text4,
+              #panel4_scene3 .text5 {
+                left: auto;
+                right: auto;
+                bottom: auto;
+              }
+
+              .desktop-text {
+                display: none;
+              }
+
+              .text {
+                position: relative;
+                width: 100%;
+                top: 0;
+                left: 0;
+                margin: 5px 0;
+              }
+
+              .globe {
+                top: auto;
+                bottom: -2%;
+                right: -2%;
+                width: 31%;
+              }
+            }
+
+            @media only screen and (min-width: 1101px) {
+              .mobile-text {
+                display: none;
+              }
+            }
+
+            @media only screen and (max-width: 640px) {
+              .dog {
+                margin-top: 15px;
+              }
+            }
+
+            .uporny-outro {
+              font-size: 22px;
+            }
+            /*LOADING OVERLAY*/
+
+            .sk-circle {
+              margin: 0px auto;
+              width: 40px;
+              height: 40px;
+              position: relative;
+            }
+
+            .sk-circle .sk-child {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+
+            .sk-circle .sk-child:before {
+              content: '';
+              display: block;
+              margin: 0 auto;
+              width: 15%;
+              height: 15%;
+              background-color: #fff;
+              border-radius: 100%;
+              -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+              animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+            }
+
+            .sk-circle .sk-circle2 {
+              -webkit-transform: rotate(30deg);
+              -ms-transform: rotate(30deg);
+              transform: rotate(30deg);
+            }
+
+            .sk-circle .sk-circle3 {
+              -webkit-transform: rotate(60deg);
+              -ms-transform: rotate(60deg);
+              transform: rotate(60deg);
+            }
+
+            .sk-circle .sk-circle4 {
+              -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+            }
+
+            .sk-circle .sk-circle5 {
+              -webkit-transform: rotate(120deg);
+              -ms-transform: rotate(120deg);
+              transform: rotate(120deg);
+            }
+
+            .sk-circle .sk-circle6 {
+              -webkit-transform: rotate(150deg);
+              -ms-transform: rotate(150deg);
+              transform: rotate(150deg);
+            }
+
+            .sk-circle .sk-circle7 {
+              -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+            }
+
+            .sk-circle .sk-circle8 {
+              -webkit-transform: rotate(210deg);
+              -ms-transform: rotate(210deg);
+              transform: rotate(210deg);
+            }
+
+            .sk-circle .sk-circle9 {
+              -webkit-transform: rotate(240deg);
+              -ms-transform: rotate(240deg);
+              transform: rotate(240deg);
+            }
+
+            .sk-circle .sk-circle10 {
+              -webkit-transform: rotate(270deg);
+              -ms-transform: rotate(270deg);
+              transform: rotate(270deg);
+            }
+
+            .sk-circle .sk-circle11 {
+              -webkit-transform: rotate(300deg);
+              -ms-transform: rotate(300deg);
+              transform: rotate(300deg);
+            }
+
+            .sk-circle .sk-circle12 {
+              -webkit-transform: rotate(330deg);
+              -ms-transform: rotate(330deg);
+              transform: rotate(330deg);
+            }
+
+            .sk-circle .sk-circle2:before {
+              -webkit-animation-delay: -1.1s;
+              animation-delay: -1.1s;
+            }
+
+            .sk-circle .sk-circle3:before {
+              -webkit-animation-delay: -1s;
+              animation-delay: -1s;
+            }
+
+            .sk-circle .sk-circle4:before {
+              -webkit-animation-delay: -0.9s;
+              animation-delay: -0.9s;
+            }
+
+            .sk-circle .sk-circle5:before {
+              -webkit-animation-delay: -0.8s;
+              animation-delay: -0.8s;
+            }
+
+            .sk-circle .sk-circle6:before {
+              -webkit-animation-delay: -0.7s;
+              animation-delay: -0.7s;
+            }
+
+            .sk-circle .sk-circle7:before {
+              -webkit-animation-delay: -0.6s;
+              animation-delay: -0.6s;
+            }
+
+            .sk-circle .sk-circle8:before {
+              -webkit-animation-delay: -0.5s;
+              animation-delay: -0.5s;
+            }
+
+            .sk-circle .sk-circle9:before {
+              -webkit-animation-delay: -0.4s;
+              animation-delay: -0.4s;
+            }
+
+            .sk-circle .sk-circle10:before {
+              -webkit-animation-delay: -0.3s;
+              animation-delay: -0.3s;
+            }
+
+            .sk-circle .sk-circle11:before {
+              -webkit-animation-delay: -0.2s;
+              animation-delay: -0.2s;
+            }
+
+            .sk-circle .sk-circle12:before {
+              -webkit-animation-delay: -0.1s;
+              animation-delay: -0.1s;
+            }
+
+            @-webkit-keyframes sk-circleBounceDelay {
+              0%,
+              80%,
+              100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+              }
+              40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+              }
+            }
+
+            @keyframes sk-circleBounceDelay {
+              0%,
+              80%,
+              100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+              }
+              40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+              }
+            }
+
+            .loading-overlay {
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              visibilty: visible;
+              opacity: 1;
+              background: rgba(0, 0, 0, 0.8);
+              transition: opacity 0.2s;
+              z-index: 1000;
+            }
+
+            .sk-circle-container {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .sk-circle-container p {
+              color: #fff;
+              line-height: 1.5em;
+              text-align: center;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <div class="loading-overlay">
+            <div class="sk-circle-container">
+              <p class="h2">Loading Uporny's Story...</p>
+              <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <div class="nav-fixed nav-fixed-full">
+            <h3 id="top" class="hdr-important hdr-centered">Keep scrolling to see the whole story</h3>
+            <em class="ico" style="text-align: center; display: block;">t</em>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <div id="trigger1">&nbsp;</div>
+          <div class="row">
+            <div class="mobile-text">
+              <div class="text">
+                <h3>March 2017</h3>
+                <p>Khabarovsky Province, Russia</p>
+              </div>
+            </div>
+            <div id="panel1_scene1" class="panel-container figure gutter-bottom-2 gutter-top-2">
+              <div id="panel1_scene1-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14541/images/hero_small/Web_Uporny_1_Panel1_clouds_opt_copy.jpg?1509459624"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14541/images/hero_full/Web_Uporny_1_Panel1_clouds_opt_copy.jpg?1509459624"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14541/images/hero_full/Web_Uporny_1_Panel1_clouds_opt_copy.jpg?1509459624"
+                    alt="illustration of blue sky and clouds" /> </picture>
+              </div>
+              <div id="panel1_scene1-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14539/images/hero_small/Web_Uporny_1_Panel1_mountains_opt.png?1509458778"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14539/images/hero_full/Web_Uporny_1_Panel1_mountains_opt.png?1509458778"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14539/images/hero_full/Web_Uporny_1_Panel1_mountains_opt.png?1509458778"
+                    alt="illustration of mountains in the distance" /> </picture>
+              </div>
+              <div id="panel1_scene1-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14540/images/hero_small/Web_Uporny_1_Panel1_trees_opt.png?1509458803"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14540/images/hero_full/Web_Uporny_1_Panel1_trees_opt.png?1509458803"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14540/images/hero_full/Web_Uporny_1_Panel1_trees_opt.png?1509458803"
+                    alt="illustration of trees at the base of the mountains in the distance" /> </picture>
+              </div>
+              <div id="panel1_scene1-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14608/images/hero_small/Web_Uporny_1_Panel1_main_opt2.png?1509635347"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14608/images/hero_full/Web_Uporny_1_Panel1_main_opt2.png?1509635347"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14608/images/cropped/Web_Uporny_1_Panel1_main_opt2.png?1509635347"
+                    alt="illustration of SUV driving in the snow pulling a snow mobile in tow" /> </picture>
+              </div>
+              <div id="panel1_scene1-layer4" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14662/images/hero_small/Web_Uporny_1_Panel1_foreground_opt.png?1510169915"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14537/images/hero_full/Web_Uporny_1_Panel1_foreground_opt.png?1509458735"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14537/images/hero_full/Web_Uporny_1_Panel1_foreground_opt.png?1509458735"
+                    alt="illustration of tall dead grass in the foreground" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <h3>March 2017</h3>
+                  <p>Khabarovsky Province, Russia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>In the Russian Far East, researchers venture into the Gursky Wildlife Refuge with a local policeman.</p>
+              </div>
+              <div class="text text2">
+                <p>They've come to investigate a problem with an Amur tiger.</p>
+              </div>
+            </div>
+            <div id="panel1_scene2" class="panel-container figure">
+              <div id="panel1_scene2-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14670/images/cropped/Web_Uporny_1_Panel2.jpg?1510173525"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14542/images/cropped/Web_Uporny_1_Panel2.jpg?1509460348"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14542/images/cropped/Web_Uporny_1_Panel2.jpg?1509460348"
+                    alt="Illustration of researchers getting out of a car in a snowy Russian landscape to investigate an Amur tiger."
+                  /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>In the Russian Far East, researchers venture into the Gursky Wildlife Refuge with a local policeman.</p>
+                </div>
+                <div class="text text2">
+                  <p>They've come to investigate a problem with an Amur tiger.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>For most of the past two years, they've been closely tracking the tiger through a GPS collar.</p>
+              </div>
+              <div class="text text2">
+                <p>Nearly a month ago, that collar stopped recording any movement, and showed a dramatic drop in the cat's body
+                  temperature.</p>
+              </div>
+              <div class="text text3">
+                <p>Blizzards prevented travel to the site until now.</p>
+              </div>
+            </div>
+            <div id="panel1_scene3" class="panel-container figure">
+              <canvas class="snow"></canvas>
+              <div id="panel1_scene3-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14403/images/hero_small/Web_Uporny_1_Panel3_main.jpg?1507748381"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14403/images/cropped/Web_Uporny_1_Panel3_main.jpg?1507748381"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14403/images/cropped/Web_Uporny_1_Panel3_main.jpg?1507748381"
+                    alt="three researchers in heavy snow" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>For most of the past two years, they've been closely tracking the tiger through a GPS collar.</p>
+                </div>
+                <div class="text text2">
+                  <p>Nearly a month ago, that collar stopped recording any movement, and showed a dramatic drop in the cat's
+                    body temperature.</p>
+                </div>
+                <div class="text text3">
+                  <p>Blizzards prevented travel to the site until now.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="trigger2">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>To find the point of the last signal, they travel 5 miles from the nearest road, expecting the worst.</p>
+              </div>
+            </div>
+            <div id="panel1_scene4" class="panel-container figure">
+              <div id="panel1_scene4-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14672/images/hero_small/Web_Uporny_1_Panel4_background.jpg?1510174205"
+                    media="max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14361/images/cropped/Web_Uporny_1_Panel4_background.jpg?1507577325"
+                    media="min-width: 768px" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14361/images/cropped/Web_Uporny_1_Panel4_background.jpg?1507577325"
+                    alt="illustrated aerial view of three researchers cross country skiing through the snow" /> </picture>
+              </div>
+              <div id="panel1_scene4-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14544/images/hero_small/Web_Uporny_1_Panel4_branches_opt.png?1509461279"
+                    media="max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14544/images/cropped/Web_Uporny_1_Panel4_branches_opt.png?1509461279"
+                    media="min-width: 768px" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14544/images/cropped/Web_Uporny_1_Panel4_branches_opt.png?1509461279"
+                    alt="branches" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>To find the point of the last signal, they travel 5 miles from the nearest road, expecting the worst.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="trigger3">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>And they're right.</p>
+              </div>
+              <div class="text">
+                <p>But this is not a story about the death of a tiger.</p>
+              </div>
+            </div>
+            <div id="panel1_scene5" class="panel-container figure">
+              <div id="panel1_scene5-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14373/images/hero_small/Web_Uporny_1_Panel5_background.jpg?1507647557"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14373/images/cropped/Web_Uporny_1_Panel5_background.jpg?1507647557"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14373/images/cropped/Web_Uporny_1_Panel5_background.jpg?1507647557"
+                    alt="illustrated background of snow and trees" /> </picture>
+              </div>
+              <div id="panel1_scene5-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14673/images/hero_small/Web_Uporny_1_Panel5_people_optimized.png?1510176493"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14545/images/cropped/Web_Uporny_1_Panel5_people_optimized.png?1509462097"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14545/images/cropped/Web_Uporny_1_Panel5_people_optimized.png?1509462097"
+                    alt="researchers in snow" /> </picture>
+              </div>
+              <div id="panel1_scene5-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14674/images/hero_small/Web_Uporny_1_Panel5_tiger_optimized.png?1510176892"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14546/images/cropped/Web_Uporny_1_Panel5_tiger_optimized.png?1509462149"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14546/images/cropped/Web_Uporny_1_Panel5_tiger_optimized.png?1509462149"
+                    alt="tiger lying covered in the snow" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>And they're right.</p>
+                </div>
+                <div class="text text2">
+                  <p>But this is not a story about the death of a tiger.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div id="panel1_scene6" class="panel-container figure">
+              <div class="text text1">
+                <p>This is a story about a wild life.</p>
+              </div>
+              <video class="centered" autoplay="autoplay" loop="loop" width="100%" height="auto">
+                <source src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/videos/uporny/Web_Uporny_1_Splash6_opt_test2.webm"
+                  type="video/webm" />
+                <source src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/videos/uporny/Web_Uporny_1_Splash6_opt_test2.mp4"
+                  type="video/mp4" />
+                <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14694/images/cropped/Screen_Shot_2017-11-10_at_12.08.38_PM.png?1510333843"
+                  alt="fallback for video with image of Uporny standing on a cliffside peering through the trees. dappled light hits his face."
+                />
+              </video>
+            </div>
+          </div>
+          <div id="trigger4">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p class="h3">November 2014</p>
+                <p>Vyazemskoye Village, Russia</p>
+              </div>
+              <div class="text">
+                <p>Several villagers spotted a lone, ragged male tiger on the outskirts of town&mdash;a rare sight, but not
+                  unheard of in the region.</p>
+              </div>
+            </div>
+            <div id="panel2_scene1" class="panel-container figure">
+              <div id="panel2_scene1-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14675/images/hero_small/Web_Uporny_2_Panel1_sky.jpg?1510177232"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14389/images/cropped/Web_Uporny_2_Panel1_sky.jpg?1507664863"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14389/images/cropped/Web_Uporny_2_Panel1_sky.jpg?1507664863"
+                    alt="pink and purple illustrated sunset" /> </picture>
+              </div>
+              <div id="panel2_scene1-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14676/images/hero_small/Web_Uporny_2_Panel1_trees.png?1510177357"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14549/images/cropped/Web_Uporny_2_Panel1_trees_opt.png?1509463083"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14549/images/cropped/Web_Uporny_2_Panel1_trees_opt.png?1509463083"
+                    alt="Background trees" /> </picture>
+              </div>
+              <div id="panel2_scene1-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14677/images/hero_small/Web_Uporny_2_Panel1_tiger_opt.png?1510177473"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14548/images/cropped/Web_Uporny_2_Panel1_tiger_opt.png?1509463067"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14548/images/cropped/Web_Uporny_2_Panel1_tiger_opt.png?1509463067"
+                    alt="Tiger lurking in background" /> </picture>
+              </div>
+              <div id="panel2_scene1-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14678/images/hero_small/Web_Uporny_2_Panel1_main_opt.png?1510177580"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14547/images/cropped/Web_Uporny_2_Panel1_main_opt.png?1509463048"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14547/images/cropped/Web_Uporny_2_Panel1_main_opt.png?1509463048"
+                    alt="snowy Vyzemskoye Village, Russia" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p class="h3">November 2014</p>
+                  <p>Vyazemskoye Village, Russia</p>
+                </div>
+                <div class="text text2">
+                  <p>Several villagers spotted a lone, ragged male tiger on the outskirts of town&mdash;a rare sight, but not
+                    unheard of in the region.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span9 uporny-map">
+              <div class="figure">
+                <div class="text text1">
+                  <p>Vyazemskoye lies at the Western edge of the Amur tiger range, where only about 540 wild tigers remain.</p>
+                </div>
+                <div class="text text2">
+                  <p>Poaching is still the biggest threat to the Amur tiger. But habitat loss from logging and development also
+                    harms their population.</p>
+                </div>
+                <div class="text text3">
+                  <p>Naturally elusive, tigers tend to avoid humans. But when human development cuts into the cats' habitat,
+                    and their natural prey becomes scarce, conflicts with humans increase.</p>
+                </div>
+                <div class="text text4">
+                  <p>Any tiger that wanders into a human settlement becomes known as a "conflict tiger."</p>
+                </div>
+                <img class="uporny-map__map_image" src="https://c402277.ssl.cf1.rackcdn.com/photos/14589/images/original/Web_Uporny_2_Panel2_map_opt.png?1509544248"
+                  alt="map of Eastern Russia" />
+                <img class="globe" src="https://c402277.ssl.cf1.rackcdn.com/photos/14590/images/cropped/Web_Uporny_2_Panel2_globe_opt.png?1509545755"
+                  alt="Globe illustration of Amur tiger habitat in far east Russia" />
+              </div>
+            </div>
+            <div class="span3 dog">
+              <div class="figure">
+                <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14314/images/cropped/Web_Uporny_2_Panel3.png?1507061102"
+                  alt="illustration of dog barking at the shadow of a tiger" />
+                <div class="text text1">
+                  <p>After tigers killed three dogs in Vyazemskoye, locals contacted a group that addresses human-tiger conflict,
+                    created with the help of WWF-Russia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="trigger5">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>Several experts from the group came to snare and tranquilize the cat, a three-year-old male in poor health.</p>
+              </div>
+              <div class="text">
+                <p>His fur was pale, and his ribs were showing. He was seriously exhausted.</p>
+              </div>
+            </div>
+            <div id="panel2_scene4" class="panel-container figure">
+              <div id="panel2_scene4-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14690/images/ship_preview/Web_Uporny_2_Panel4_BG.png?1510253723"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14447/images/cropped/Web_Uporny_2_Panel4_BG.png?1508263570"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14447/images/cropped/Web_Uporny_2_Panel4_BG.png?1508263570"
+                    alt="grey background" /> </picture>
+              </div>
+              <div id="panel2_scene4-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14679/images/ship_preview/Web_Uporny_2_Panel4_tiger-no-bg_opt.png?1510178080"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14585/images/cropped/Web_Uporny_2_Panel4_tiger-no-bg_opt.png?1509476250"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14585/images/cropped/Web_Uporny_2_Panel4_tiger-no-bg_opt.png?1509476250"
+                    alt="illustrated tiger in a cautious stance looking to left" /> </picture>
+              </div>
+              <div id="panel2_scene4-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14550/images/ship_preview/Web_Uporny_2_Panel4_dart_opt.png?1509464090"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14550/images/cropped/Web_Uporny_2_Panel4_dart_opt.png?1509464090"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14550/images/cropped/Web_Uporny_2_Panel4_dart_opt.png?1509464090"
+                    alt="illustration of dart moving from left to right" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>Several experts from the group came to snare and tranquilize the cat, a three-year-old male in poor health.</p>
+                </div>
+                <div class="text text2">
+                  <p>His fur was pale, and his ribs were showing. He was seriously exhausted.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div id="panel2_scene5" class="panel-container figure">
+              <div class="text text1">
+                <p>The tiger was brought to Utyos Rehabilitation Center in Khabarovsky Province, under the care of Pavel Fomenko,
+                  species program coordinator for WWF-Russia's Amur branch.</p>
+              </div>
+              <div class="text text2">
+                <p>The government-run facility specializes in nursing distressed tigers back to health for their eventual release
+                  into the wild.</p>
+              </div>
+              <div class="text text3">
+                <p>It's here where the tiger earned his name.</p>
+              </div>
+              <div class="text text4">
+                <p>When he refused to leave his transport cage and enter his new enclosure, the Utyos staff named him
+                  <em>Uporny</em>, which is Russian for "stubborn".</p>
+              </div>
+              <video id="blink" class="centered" autoplay="autoplay" width="100%" height="auto">
+                <source src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/videos/uporny/Web_Uporny_2_Panel5_opt_test2.webm"
+                  type="video/webm" />
+                <source src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/videos/uporny/Web_Uporny_2_Panel5_opt_test2.mp4"
+                />
+                <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14693/images/hero_full/Screen_Shot_2017-11-10_at_12.09.34_PM.png?1510333807"
+                  alt="fallback of video with image of Uporny sitting in a dark cage. Only his yellow gleaming eyes are visible"
+                />
+              </video>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>But Uporny's health improved quickly, and he eagerly accepted food.</p>
+              </div>
+              <div class="text text2">
+                <p>Experts from Utyos made sure to keep contact with Uporny to a minimum, preserving his wild instincts for
+                  his eventual release.</p>
+              </div>
+            </div>
+            <div id="panel2_scene5" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>But Uporny's health improved quickly, and he eagerly accepted food.</p>
+                </div>
+                <div class="text text2">
+                  <p>Experts from Utyos made sure to keep contact with Uporny to a minimum, preserving his wild instincts for
+                    his eventual release.</p>
+                </div>
+              </div>
+              <div id="panel2_scene5-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14680/images/cropped/Web_Uporny_2_Panel6.jpg?1510178424"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14449/images/cropped/Web_Uporny_2_Panel6.jpg?1508270233"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14449/images/cropped/Web_Uporny_2_Panel6.jpg?1508270233"
+                    alt="illustration of Uporny eating a chunk of meat" /> </picture>
+              </div>
+            </div>
+          </div>
+          <div id="trigger6">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>A plan was formulated to study Uporny in the wild.</p>
+              </div>
+              <div class="text">
+                <p>He was outfitted with a radio collar, which measured body temperature and location, so his movement through
+                  the wilderness could be closely tracked.</p>
+              </div>
+              <div class="text">
+                <p>The collar could be detached remotely, or would detach automatically when it ran out of battery power.</p>
+              </div>
+            </div>
+            <div id="panel2_scene7" class="panel-container figure">
+              <div id="panel2_scene7-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14450/images/hero_small/Web_Uporny_2_Panel7_background.jpg?1508272350"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14450/images/cropped/Web_Uporny_2_Panel7_background.jpg?1508272350"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14450/images/cropped/Web_Uporny_2_Panel7_background.jpg?1508272350"
+                    alt="blurred background" /> </picture>
+              </div>
+              <div id="panel2_scene7-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14552/images/hero_small/Web_Uporny_2_Panel7_blur_1_opt.png?1509464289"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14552/images/cropped/Web_Uporny_2_Panel7_blur_1_opt.png?1509464289"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14552/images/cropped/Web_Uporny_2_Panel7_blur_1_opt.png?1509464289"
+                    alt="illustration of blurred background plants" /> </picture>
+              </div>
+              <div id="panel2_scene7-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14554/images/hero_small/Web_Uporny_2_Panel7_blur_2_opt.png?1509464309"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14554/images/cropped/Web_Uporny_2_Panel7_blur_2_opt.png?1509464309"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14554/images/cropped/Web_Uporny_2_Panel7_blur_2_opt.png?1509464309"
+                    alt="illustration of blurred background plants" /> </picture>
+              </div>
+              <div id="panel2_scene7-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14555/images/hero_small/Web_Uporny_2_Panel7_tiger_opt.png?1509464329"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14555/images/cropped/Web_Uporny_2_Panel7_tiger_opt.png?1509464329"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14555/images/cropped/Web_Uporny_2_Panel7_tiger_opt.png?1509464329"
+                    alt="Uporny with tracking device looking out into distance" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>A plan was formulated to study Uporny in the wild.</p>
+                </div>
+                <div class="text text2">
+                  <p>He was outfitted with a radio collar, which measured body temperature and location, so his movement through
+                    the wilderness could be closely tracked.</p>
+                </div>
+                <div class="text text3">
+                  <p>The collar could be detached remotely, or would detach automatically when it ran out of battery power.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="span4 figure">
+              <div class="text text1">
+                <p>Along with gathering data from the collar, researchers would track Uporny's activities through observations
+                  in the field and the use of camera traps.</p>
+              </div>
+              <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14467/images/cropped/Web_Uporny_2_Panel8.jpg?1508512743" alt="Researcher setting up a camera trap"
+              />
+            </div>
+            <div class="span4 center-panel figure">
+              <div class="text text1">
+                <p>The goal was to learn how rehabilitated tigers move through the region, where they hunt...</p>
+              </div>
+              <div class="text text2">
+                <p>...and how best to keep their population safe and away from human settlements.</p>
+              </div>
+              <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14468/images/cropped/Web_Uporny_2_Panel9.jpg?1508510788" alt="Tiger caught on a camera trap"
+              />
+            </div>
+            <div class="span4 figure">
+              <div class="text text1">
+                <p>After 6 months at Utyos, Uporny was healthy and ready to be released back into the wild.</p>
+              </div>
+              <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14469/images/cropped/Web_Uporny_2_Panel10.jpg?1508510836" alt="Uporny from behind looking outside the fence"
+              />
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div id="panel3_scene1" class="panel-container figure">
+              <div class="text text1">
+                <h3>May 28, 2015</h3>
+                <p>Border of Anyuisky National Park</p>
+              </div>
+              <div class="text text2">
+                <p>A site for release was chosen 124 miles northeast of Utyos rehabilitation center, just outside the park in
+                  prime tiger habitat.</p>
+              </div>
+              <div class="text text3">
+                <p>A male tiger and a female with a cub were already known to be in the area.</p>
+              </div>
+              <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14470/images/cropped/Web_Uporny_3_Panel1.jpg?1508513535" alt="Trucks in a field preparing to release Uporny"
+              />
+            </div>
+          </div>
+          <div id="trigger7">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>The cage door slid open. Healthy and energetic, Uporny bolted from the cage without looking back.</p>
+              </div>
+            </div>
+            <div id="panel3_scene2" class="panel-container figure">
+              <div id="panel3_scene2-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14464/images/hero_small/Web_Uporny_3_Panel2_sky_copy.jpg?1508448617"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14464/images/cropped/Web_Uporny_3_Panel2_sky_copy.jpg?1508448617"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14464/images/cropped/Web_Uporny_3_Panel2_sky_copy.jpg?1508448617"
+                    alt="background sky" /> </picture>
+              </div>
+              <div id="panel3_scene2-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14560/images/hero_small/Web_Uporny_3_Panel2_mountains_opt.png?1509465033"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14560/images/cropped/Web_Uporny_3_Panel2_mountains_opt.png?1509465033"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14560/images/cropped/Web_Uporny_3_Panel2_mountains_opt.png?1509465033"
+                    alt="background mountains" /> </picture>
+              </div>
+              <div id="panel3_scene2-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14562/images/hero_small/Web_Uporny_3_Panel2_Trees_opt.png?1509465167"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14562/images/cropped/Web_Uporny_3_Panel2_Trees_opt.png?1509465167"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14562/images/cropped/Web_Uporny_3_Panel2_Trees_opt.png?1509465167"
+                    alt="background trees" /> </picture>
+              </div>
+              <div id="panel3_scene2-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14561/images/hero_small/Web_Uporny_3_Panel2_tiger_opt.png?1509465059"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14561/images/cropped/Web_Uporny_3_Panel2_tiger_opt.png?1509465059"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14561/images/cropped/Web_Uporny_3_Panel2_tiger_opt.png?1509465059"
+                    alt="Uporny dashing from the truck" /> </picture>
+              </div>
+              <div id="panel3_scene2-layer4" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14559/images/hero_small/Web_Uporny_3_Panel2_motion_lines_opt.png?1509465014"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14559/images/cropped/Web_Uporny_3_Panel2_motion_lines_opt.png?1509465014"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14559/images/cropped/Web_Uporny_3_Panel2_motion_lines_opt.png?1509465014"
+                    alt="motion lines" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>The cage door slid open. Healthy and energetic, Uporny bolted from the cage without looking back.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>Uporny still had a long journey ahead of him.</p>
+              </div>
+              <div class="text text2">
+                <p>He would need to establish a home range, find prey, and survive against competitors in the forests of the
+                  Russian taiga&mdash;a harsh environment with long, cold winters.</p>
+              </div>
+            </div>
+            <div id="panel3_scene3" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>Uporny still had a long journey ahead of him.</p>
+                </div>
+                <div class="text text2">
+                  <p>He would need to establish a home range, find prey, and survive against competitors in the forests of the
+                    Russian taiga&mdash;a harsh environment with long, cold winters.</p>
+                </div>
+              </div>
+              <div id="panel3_scene3-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14681/images/hero_small/Web_Uporny_3_Panel3.jpg?1510243866"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14471/images/cropped/Web_Uporny_3_Panel3.jpg?1508521481"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14471/images/cropped/Web_Uporny_3_Panel3.jpg?1508521481"
+                    alt="Uporny dashing through the forest" /> </picture>
+              </div>
+            </div>
+          </div>
+          <div id="trigger8">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>Over the next five months, the researchers waited anxiously for Uporny to settle as he steadily roamed northward
+                  in search of a home range.</p>
+                <p>But the cat showed signs that he was adjusting well to his new life.</p>
+              </div>
+            </div>
+            <div id="panel3_scene4" class="panel-container figure">
+              <div id="panel3_scene4-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14682/images/hero_small/Web_Uporny_3_Panel4_main_copy.jpg?1510244196"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14472/images/cropped/Web_Uporny_3_Panel4_main_copy.jpg?1508523073"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14472/images/cropped/Web_Uporny_3_Panel4_main_copy.jpg?1508523073"
+                    alt="birdseye view of Uporny walking through the forest" /> </picture>
+              </div>
+              <div id="panel3_scene4-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14563/images/hero_small/Web_Uporny_3_Panel4_trees_opt.png?1509465281"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14563/images/cropped/Web_Uporny_3_Panel4_trees_opt.png?1509465281"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14563/images/cropped/Web_Uporny_3_Panel4_trees_opt.png?1509465281"
+                    alt="tree branches" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div id="uporny-territory">
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14474/images/cropped/Web_Uporny_3_Panel5_Map.jpg?1508523251"
+                    alt="map of Uporny's territory" />
+                </div>
+                <div class="text text1">
+                  <p>Over the next five months, the researchers waited anxiously for Uporny to settle as he steadily roamed
+                    northward in search of a home range.</p>
+                  <p>But the cat showed signs that he was adjusting well to his new life.</p>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-text gutter-top-3">
+              <img class="centered" src="https://c402277.ssl.cf1.rackcdn.com/photos/14474/images/magazine_small/Web_Uporny_3_Panel5_Map.jpg?1508523251"
+                alt="map of Uporny's territory" />
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>The clearest sign was his diet. Through field excursions, researchers noted that the cat was hunting well,
+                  regularly catching boar, red deer, and in one case, a female moose&mdash;an exceptionally large prey for
+                  a tiger.</p>
+              </div>
+            </div>
+            <div id="panel3_scene5" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>The clearest sign was his diet. Through field excursions, researchers noted that the cat was hunting well,
+                    regularly catching boar, red deer, and in one case, a female moose&mdash;an exceptionally large prey
+                    for a tiger.</p>
+                </div>
+              </div>
+              <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14475/images/cropped/Web_Uporny_3_Panel6.jpg?1508529178" alt="Boar, red deer and moose"
+              />
+            </div>
+          </div>
+          <div id="trigger9">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <h3>November 2015</h3>
+                <p>After months on the move, traveling over 430 miles, Uporny finally settled in the Gur Valley River.</p>
+              </div>
+              <div class="text">
+                <p>He was home.</p>
+              </div>
+            </div>
+            <div id="panel3_scene6" class="panel-container figure">
+              <div id="panel3_scene6-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14483/images/hero_small/Web_Uporny_3_Panel7_sky_copy.jpg?1508531789"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14483/images/cropped/Web_Uporny_3_Panel7_sky_copy.jpg?1508531789"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14483/images/cropped/Web_Uporny_3_Panel7_sky_copy.jpg?1508531789"
+                    alt="sky" /> </picture>
+              </div>
+              <div id="panel3_scene6-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14566/images/hero_small/Web_Uporny_3_Panel7_mountains_opt.png?1509465838"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14566/images/cropped/Web_Uporny_3_Panel7_mountains_opt.png?1509465838"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14566/images/cropped/Web_Uporny_3_Panel7_mountains_opt.png?1509465838"
+                    alt="mountains" /> </picture>
+              </div>
+              <div id="panel3_scene6-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14567/images/hero_small/Web_Uporny_3_Panel7_trees_opt.png?1509465865"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14567/images/cropped/Web_Uporny_3_Panel7_trees_opt.png?1509465865"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14567/images/cropped/Web_Uporny_3_Panel7_trees_opt.png?1509465865"
+                    alt="valley" /> </picture>
+              </div>
+              <div id="panel3_scene6-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14683/images/hero_small/Web_Uporny_3_Panel7_middle_tree_opt.png?1510244592"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14565/images/cropped/Web_Uporny_3_Panel7_middle_tree_opt.png?1509465807"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14565/images/cropped/Web_Uporny_3_Panel7_middle_tree_opt.png?1509465807"
+                    alt="foreground tree" /> </picture>
+              </div>
+              <div id="panel3_scene6-layer4" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14564/images/hero_small/Web_Uporny_3_Panel7_main_opt.png?1509465753"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14564/images/cropped/Web_Uporny_3_Panel7_main_opt.png?1509465753"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14564/images/cropped/Web_Uporny_3_Panel7_main_opt.png?1509465753"
+                    alt="Uporny looking out at the valley" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <h3>November 2015</h3>
+                  <p>After months on the move, traveling over 430 miles, Uporny finally settled in the Gur Valley River.</p>
+                </div>
+                <div class="text text2">
+                  <p>He was home.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="trigger10">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <h3>September 2016</h3>
+                <p>The following fall, researchers even discovered evidence that Uporny had found a mate&mdash;a great sign,
+                  since rehabilitated animals often show poor social skills.</p>
+              </div>
+            </div>
+            <div id="panel3_scene8" class="panel-container figure">
+              <div id="panel3_scene8-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14487/images/ship_preview/Web_Uporny_3_Panel8_prints.jpg?1510244999"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14487/images/cropped/Web_Uporny_3_Panel8_prints.jpg?1508536603"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14487/images/cropped/Web_Uporny_3_Panel8_prints.jpg?1508536603"
+                    alt="paw prints on muddy ground" /> </picture>
+              </div>
+              <div id="panel3_scene8-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14684/images/ship_preview/Web_Uporny_3_Panel8_tree_opt.png?1510244984"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14568/images/cropped/Web_Uporny_3_Panel8_tree_opt.png?1509466095"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14568/images/cropped/Web_Uporny_3_Panel8_tree_opt.png?1509466095"
+                    alt="foreground tree" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <h3>September 2016</h3>
+                  <p>The following fall, researchers even discovered evidence that Uporny had found a mate&mdash;a great sign,
+                    since rehabilitated animals often show poor social skills.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>Because they were learning so much from Uporny's movements, the research team decided to leave his GPS collar
+                  on for another year and a half.</p>
+              </div>
+            </div>
+            <div id="panel3_scene8" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>Because they were learning so much from Uporny's movements, the research team decided to leave his GPS
+                    collar on for another year and a half.</p>
+                </div>
+              </div>
+              <div id="panel3_scene8-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14485/images/hero_small/Web_Uporny_3_Panel9.jpg?1508534560"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14485/images/cropped/Web_Uporny_3_Panel9.jpg?1508534560"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14485/images/cropped/Web_Uporny_3_Panel9.jpg?1508534560"
+                    alt="Uporny walking away and looking back at the camera" /> </picture>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <h3>March 2017</h3>
+                <p>And that extension of their study led them here.</p>
+              </div>
+              <div class="text text2">
+                <p>Life in the taiga is unforgiving; only the strongest survive.</p>
+              </div>
+            </div>
+            <div id="panel4_scene1" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <h3>March 2017</h3>
+                  <p>And that extension of their study led them here.</p>
+                </div>
+                <div class="text text2">
+                  <p>Life in the taiga is unforgiving; only the strongest survive.</p>
+                </div>
+              </div>
+              <div id="panel4_scene1-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14685/images/hero_small/Web_Uporny_4_Panel1.jpg?1510245362"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14484/images/cropped/Web_Uporny_4_Panel1.jpg?1508534535"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14484/images/cropped/Web_Uporny_4_Panel1.jpg?1508534535"
+                    alt="Uporny buried in the snow" /> </picture>
+              </div>
+            </div>
+          </div>
+          <div id="trigger11">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>An autopsy is conducted to reveal what caused Uporny's death.</p>
+              </div>
+              <div class="text">
+                <p>All evidence points towards a fight with another large predator, almost certainly another male tiger.</p>
+              </div>
+            </div>
+            <div id="panel4_scene2" class="panel-container figure">
+              <div id="panel4_scene2-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14489/images/hero_small/Web_Uporny_4_Panel2_background_copy.jpg?1508537618"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14489/images/cropped/Web_Uporny_4_Panel2_background_copy.jpg?1508537618"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14489/images/cropped/Web_Uporny_4_Panel2_background_copy.jpg?1508537618"
+                    alt="snow background" /> </picture>
+              </div>
+              <div id="panel4_scene2-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14574/images/hero_small/Web_Uporny_4_Panel2_trees_opt.png?1509466396"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14574/images/cropped/Web_Uporny_4_Panel2_trees_opt.png?1509466396"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14574/images/cropped/Web_Uporny_4_Panel2_trees_opt.png?1509466396"
+                    alt="snow foreground with trees" /> </picture>
+              </div>
+              <div id="panel4_scene2-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14686/images/hero_small/Web_Uporny_4_Panel2_tigers_opt.png?1510245576"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14571/images/cropped/Web_Uporny_4_Panel2_tigers_opt.png?1509466305"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14571/images/cropped/Web_Uporny_4_Panel2_tigers_opt.png?1509466305"
+                    alt="two tigers fighting" /> </picture>
+              </div>
+              <div id="panel4_scene2-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14493/images/hero_small/Web_Uporny_4_Panel2_snow.png?1508538078"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14493/images/cropped/Web_Uporny_4_Panel2_snow.png?1508538078"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14493/images/cropped/Web_Uporny_4_Panel2_snow.png?1508538078"
+                    alt="snow spray" /> </picture>
+              </div>
+              <div id="panel4_scene2-layer4" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14569/images/hero_small/Web_Uporny_4_Panel2_snow_2_opt.png?1509466267"
+                    media="(max-width: 767px)" />
+                  <source srcset="" media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14490/images/cropped/Web_Uporny_4_Panel2_snow_2.png?1508537655"
+                    alt="snow spray" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>An autopsy is conducted to reveal what caused Uporny's death.</p>
+                </div>
+                <div class="text text2">
+                  <p>All evidence points towards a fight with another large predator, almost certainly another male tiger.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>For WWF-Russia, Uporny became a symbol for the freedom and struggle of survival in the wild.</p>
+              </div>
+              <div class="text text2">
+                <p>He was captured, rehabilitated, and forced to adapt all over again.</p>
+              </div>
+              <div class="text text3">
+                <p>He lived freely in the forest for two years, in the harshest conditions, with temperatures dropping to -40&deg;F
+                  and snow up to five feet deep.</p>
+              </div>
+              <div class="text text4">
+                <p>He successfully killed large prey, and we believe he found a mate.</p>
+              </div>
+              <div class="text text5">
+                <p>Uporny lived a truly wild life, and met a wild end.</p>
+              </div>
+            </div>
+            <div id="panel4_scene3" class="panel-container figure">
+              <canvas class="snow2"></canvas>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>For WWF-Russia, Uporny became a symbol for the freedom and struggle of survival in the wild.</p>
+                </div>
+                <div class="text text2">
+                  <p>He was captured, rehabilitated, and forced to adapt all over again.</p>
+                </div>
+                <div class="text text3">
+                  <p>He lived freely in the forest for two years, in the harshest conditions, with temperatures dropping to
+                    -40&deg;F and snow up to five feet deep.</p>
+                </div>
+                <div class="text text4">
+                  <p>He successfully killed large prey, and we believe he found a mate.</p>
+                </div>
+                <div class="text text5">
+                  <p>Uporny lived a truly wild life, and met a wild end.</p>
+                </div>
+              </div>
+              <div id="panel4_scene3-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14486/images/hero_small/Web_Uporny_4_Panel3_copy.jpg?1508534599"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14486/images/cropped/Web_Uporny_4_Panel3_copy.jpg?1508534599"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14486/images/cropped/Web_Uporny_4_Panel3_copy.jpg?1508534599"
+                    alt="Uporny looking at camera" /> </picture>
+              </div>
+            </div>
+          </div>
+          <div id="trigger12">&nbsp;</div>
+          <div class="gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>"He shared his life story with us," says Fomenko.</p>
+              </div>
+              <div class="text">
+                <p>"With natural causes leading to so many tiger deaths in this region, it's important to keep threats from
+                  humans to an absolute minimum."</p>
+              </div>
+            </div>
+            <div id="panel4_scene4" class="panel-container figure">
+              <div id="panel4_scene4-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14688/images/cropped/Web_Uporny_4_Panel4_background_copy.jpg?1510246666"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14494/images/cropped/Web_Uporny_4_Panel4_background_copy.jpg?1508539009"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14494/images/cropped/Web_Uporny_4_Panel4_background_copy.jpg?1508539009"
+                    alt="snowy background" /> </picture>
+              </div>
+              <div id="panel4_scene4-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14687/images/cropped/Web_Uporny_4_Panel4_hands_opt.png?1510246423"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14578/images/cropped/Web_Uporny_4_Panel4_hands_opt.png?1509466626"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14578/images/cropped/Web_Uporny_4_Panel4_hands_opt.png?1509466626"
+                    alt="Researcher holding Uporny's tracking collar" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>"He shared his life story with us," says Fomenko.</p>
+                </div>
+                <div class="text text2">
+                  <p>"With natural causes leading to so many tiger deaths in this region, it's important to keep threats from
+                    humans to an absolute minimum."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text text1">
+                <p>This intimate look into the life of an Amur tiger will help us ensure the safety of this vulnerable species...</p>
+              </div>
+            </div>
+            <div id="panel4_scene5" class="panel-container figure">
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>This intimate look into the life of an Amur tiger will help us ensure the safety of this vulnerable species...</p>
+                </div>
+              </div>
+              <picture>
+                <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14689/images/cropped/Web_Uporny_4_Panel5_1_.jpg?1510246868"
+                  media="(max-width: 767px)" />
+                <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14505/images/cropped/Web_Uporny_4_Panel5_1_.jpg?1508770939"
+                  media="(min-width: 768px)" />
+                <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14505/images/cropped/Web_Uporny_4_Panel5_1_.jpg?1508770939"
+                  alt="light filtering onto the forest floor" /> </picture>
+            </div>
+          </div>
+          <div id="trigger13">&nbsp;</div>
+          <div class="row gutter-bottom-2">
+            <div class="mobile-text">
+              <div class="text">
+                <p>...and future populations will owe their continued success in part to one stubborn tiger.</p>
+              </div>
+            </div>
+            <div id="panel4_scene6" class="panel-container figure">
+              <div id="panel4_scene6-layer0" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14496/images/hero_small/Web_Uporny_4_Panel6_background_copy.jpg?1508539417"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14496/images/cropped/Web_Uporny_4_Panel6_background_copy.jpg?1508539417"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14496/images/cropped/Web_Uporny_4_Panel6_background_copy.jpg?1508539417"
+                    alt="green background" /> </picture>
+              </div>
+              <div id="panel4_scene6-layer1" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14584/images/hero_small/Web_Uporny_4_Panel6_main_opt.png?1509467089"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14584/images/cropped/Web_Uporny_4_Panel6_main_opt.png?1509467089"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14584/images/cropped/Web_Uporny_4_Panel6_main_opt.png?1509467089"
+                    alt="Tigers walking through the forest" /> </picture>
+              </div>
+              <div id="panel4_scene6-layer2" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14582/images/hero_small/Web_Uporny_4_Panel6_foreground_bushes_opt.png?1509467038"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14582/images/cropped/Web_Uporny_4_Panel6_foreground_bushes_opt.png?1509467038"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14582/images/cropped/Web_Uporny_4_Panel6_foreground_bushes_opt.png?1509467038"
+                    alt="bushes" /> </picture>
+              </div>
+              <div id="panel4_scene6-layer3" class="layer">
+                <picture>
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14583/images/hero_small/Web_Uporny_4_Panel6_foreground_trees_opt.png?1509467060"
+                    media="(max-width: 767px)" />
+                  <source srcset="https://c402277.ssl.cf1.rackcdn.com/photos/14583/images/cropped/Web_Uporny_4_Panel6_foreground_trees_opt.png?1509467060"
+                    media="(min-width: 768px)" />
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/14583/images/cropped/Web_Uporny_4_Panel6_foreground_trees_opt.png?1509467060"
+                    alt="trees" /> </picture>
+              </div>
+              <div class="desktop-text">
+                <div class="text text1">
+                  <p>...And future populations will owe their continued success in part to one stubborn tiger.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row gutter-horiz-in wysiwyg lead">
+        <div class="span12">
+          <hr/>
+          <div class="uporny-outro">
+            <p>Uporny's rehabilitation was the result of collaboration between Khabarovsky Province Hunting Department's Tiger
+              Conflict Resolution Group, the Utyos Rehabilitation Center, WWF-Russia, and the Amur Tiger Center.</p>
+            <p>Since the beginning of 2017, three other tigers have been rehabilitated and released through these partners'
+              work. Two tiger cubs have also been rescued and are currently being rehabilitated.</p>
+          </div>
+          <hr/>
+          <p>
+            <a href="#top">
+              <strong>Back to top.</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+
+
+  <script src="assets/script01.js"></script>
+
+  <!--[if lt IE 9]>
+  <script>
+    $(document).ready(function() {
+      $('.ie-old-browser-notification .close').on('click', function(){
+        $(this).closest('.ie-old-browser-notification').fadeOut('slow');
+      });
+    });
+  </script>
+  <![endif]-->
+  <div class="screen-reader" data-snippet-content="magazine-issues-winter-2017-articles-uporny-s-story-javascript">
+
+    <script>
+      $('.list-vertical-bordered-items').append(
+        '<li class="span3 gutter-horiz-in"><strong class="hdr">Illustration:</strong>Matt Twombly</li>');
+
+      document.getElementById('blink').addEventListener('ended', myHandler, false);
+
+      function myHandler(e) {
+        console.log('ended');
+        setTimeout(function () {
+          document.getElementById('blink').play();
+        }, 2000);
+      }
+
+      $(window).on("load", function () {
+        $('.loading-overlay').fadeOut();
+        var panelContainerResize = function () {
+          $('.panel-container').each(function () {
+            var layer = $(this).find('.layer');
+            var layerHeight = layer.height();
+            $(this).css('height', layerHeight);
+          });
+        }
+
+        panelContainerResize();
+        $(window).resize(function () {
+          panelContainerResize();
+        });
+
+        //panel1 scene1 animation
+        var SMController1 = new ScrollMagic.Controller();
+
+        var panel1Scene1TLM = new TimelineMax({
+          onComplete: panelRightEase
+        });
+
+        var p1S1Layer4Images = $('#panel1_scene1-layer4 picture source, #panel1_scene1-layer4 img');
+
+        var p1S1Layer3Images = $('#panel1_scene1-layer3 picture source, #panel1_scene1-layer3 img');
+
+        var p1S1Layer2Images = $('#panel1_scene1-layer2 picture source, #panel1_scene1-layer2 img');
+
+        var p1S1Layer1Images = $('#panel1_scene1-layer1 picture source, #panel1_scene1-layer1 img');
+
+        panel1Scene1TLM
+          .fromTo(p1S1Layer4Images, 4, {
+            x: 0,
+            y: 0
+          }, {
+            x: 170,
+            y: 0
+          }, "+=1")
+          .add("endp1s1")
+          .to(p1S1Layer3Images, 5, {
+            scaleX: 1.04,
+            scaleY: 1.03
+          }, "endp1s1-=4")
+          .fromTo(p1S1Layer2Images, 4, {
+            x: -94,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "endp1s1-=4")
+          .fromTo(p1S1Layer1Images, 4, {
+            x: -30,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "endp1s1-=4")
+
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: "#trigger1",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel1Scene1TLM)
+          .setPin("#panel1_scene1")
+          .addTo(SMController1)
+
+        function panelRightEase() {
+          console.log("panelRightEase()");
+        }
+
+        //panel 1 scene4 animation 
+        var SMController2 = new ScrollMagic.Controller();
+
+        var panel1Scene4TLM = new TimelineMax({
+          onComplete: panelZoom
+        });
+
+        var p1S4Layer1Images = $('#panel1_scene4-layer1 picture source, #panel1_scene4-layer1 img');
+
+        var p1S4Layer0Images = $('#panel1_scene4-layer0 picture source, #panel1_scene4-layer0 img');
+
+        panel1Scene4TLM
+          .fromTo(p1S4Layer1Images, 1, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "+=0")
+          .add("end")
+          .fromTo(p1S4Layer0Images, 1.7, {
+            scaleX: 1.19,
+            scaleY: 1.19
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "end-=1.5")
+
+        var scene2 = new ScrollMagic.Scene({
+            triggerElement: "#trigger2",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel1Scene4TLM)
+          .setPin("#panel1_scene4")
+          .addTo(SMController2)
+
+        function panelZoom() {
+          console.log("panelZoom()");
+        }
+
+        //panel 1 scene5 animation
+        var SMController3 = new ScrollMagic.Controller();
+
+        var panel1Scene5TLM = new TimelineMax({
+          onComplete: panelZoomRight
+        });
+
+        var p1S5Layer2Images = $('#panel1_scene5-layer2 picture source, #panel1_scene5-layer2 img');
+
+        var p1S5Layer1Images = $('#panel1_scene5-layer1 picture source, #panel1_scene5-layer1 img');
+
+        panel1Scene5TLM
+          .to(p1S5Layer2Images, 1, {
+            scaleX: 1.1,
+            scaleY: 1.05
+          }, "+=0")
+          .add("endp1s5")
+          .to(p1S5Layer1Images, 1, {
+            scaleX: 1.05,
+            scaleY: 1.02
+          }, "end-=1")
+
+        var scene3 = new ScrollMagic.Scene({
+            triggerElement: "#trigger3",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel1Scene5TLM)
+          .setPin("#panel1_scene5")
+          .addTo(SMController3)
+
+        function panelZoomRight() {
+          console.log("panelZoomRight()");
+        }
+
+        //panel2 scene1 animation
+        var SMController4 = new ScrollMagic.Controller();
+
+        var panel2Scene1TLM = new TimelineMax({
+          onComplete: panelPanRight
+        });
+
+        var p2S1Layer3Images = $('#panel2_scene1-layer3 picture source, #panel2_scene1-layer3 img');
+
+        var p2S1Layer2Images = $('#panel2_scene1-layer2 picture source, #panel2_scene1-layer2 img');
+
+        var p2S1Layer1Images = $('#panel2_scene1-layer1 picture source, #panel2_scene1-layer1 img');
+
+        var p2S1Layer0Images = $('#panel2_scene1-layer0 picture source, #panel2_scene1-layer0 img');
+
+        panel2Scene1TLM
+          .to(p2S1Layer3Images, 4, {
+            scaleX: 1.3,
+            scaleY: 1.3
+          }, "+=0")
+          .add("end")
+          .to(p2S1Layer2Images, 4, {
+            scaleX: 1.25,
+            scaleY: 1.25
+          }, "end-=4")
+          .to(p2S1Layer1Images, 4, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, "end-=4")
+          .to(p2S1Layer0Images, 4, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, "end-=3")
+
+        var scene4 = new ScrollMagic.Scene({
+            triggerElement: "#trigger4",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel2Scene1TLM)
+          .setPin("#panel2_scene1")
+          .addTo(SMController4)
+
+        function panelPanRight() {
+          console.log("panelPanRight()");
+        }
+
+        //panel2 scene 4 animation
+        var SMController5 = new ScrollMagic.Controller();
+
+        var panel2Scene4TLM = new TimelineMax({
+          onComplete: dart
+        });
+
+        var p2S4Layer2Images = $('#panel2_scene4-layer2 picture source, #panel2_scene4-layer2 img');
+
+        var p2S4Layer1Images = $('#panel2_scene4-layer1 picture source, #panel2_scene4-layer1 img');
+
+        panel2Scene4TLM
+          .fromTo(p2S4Layer2Images, 3, {
+            x: -100,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "+=0")
+          .add("end")
+          .fromTo(p2S4Layer1Images, 3, {
+            x: 50,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "end-=3")
+
+        var scene5 = new ScrollMagic.Scene({
+            triggerElement: "#trigger5",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel2Scene4TLM)
+          .setPin("#panel2_scene4")
+          .addTo(SMController5)
+
+        function dart() {
+          console.log("dart()");
+        }
+
+        //panel2 scene7 animation
+        var SMController6 = new ScrollMagic.Controller();
+
+        var panel2Scene7TLM = new TimelineMax({
+          onComplete: tigerZoomOut
+        });
+
+        var p2S7Layer1Images = $('#panel2_scene7-layer1 picture source, #panel2_scene7-layer1 img');
+
+        var p2S7Layer2Images = $('#panel2_scene7-layer2 picture source, #panel2_scene7-layer2 img');
+
+        var p2S7Layer3Images = $('#panel2_scene7-layer3 picture source, #panel2_scene7-layer3 img');
+
+        panel2Scene7TLM
+          .fromTo(p2S7Layer1Images, 3, {
+            scaleX: 1.16,
+            scaleY: 1.16
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "+=0")
+          .add("end")
+          .fromTo(p2S7Layer2Images, 3, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "end-=3")
+          .fromTo(p2S7Layer3Images, 3, {
+            scaleX: 1.21,
+            scaleY: 1.21
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "end-=3")
+
+        var scene6 = new ScrollMagic.Scene({
+            triggerElement: "#trigger6",
+            duration: 2500,
+            triggerHook: 0
+          })
+
+          .setTween(panel2Scene7TLM)
+          .setPin("#panel2_scene7")
+          .addTo(SMController6)
+
+        function tigerZoomOut() {
+          console.log("tigerZoomOut");
+        }
+
+        //panel3 scene2 animation 
+        var SMController7 = new ScrollMagic.Controller();
+
+        var panel3Scene2TLM = new TimelineMax({
+          onComplete: tigerRun
+        });
+
+        var p3S2Layer2Images = $('#panel3_scene2-layer2 picture source, #panel3_scene2-layer2 img');
+
+        var p3S2Layer3Images = $('#panel3_scene2-layer3 picture source, #panel3_scene2-layer3 img');
+
+        var p3S2Layer4Images = $('#panel3_scene2-layer4 picture source, #panel3_scene2-layer4 img');
+
+        panel3Scene2TLM
+          .fromTo(p3S2Layer2Images, 3, {
+            scaleX: 1.15,
+            scaleY: 1.15
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "+=0")
+          .add("end")
+          .fromTo(p3S2Layer3Images, 3, {
+            scaleX: 1,
+            scaleY: 1
+          }, {
+            scaleX: 1.05,
+            scaleY: 1.05
+          }, "-=3")
+          .fromTo(p3S2Layer4Images, 3, {
+            scaleX: 1,
+            scaleY: 1
+          }, {
+            scaleX: 1.05,
+            scaleY: 1.05
+          }, "-=3")
+
+        var scene7 = new ScrollMagic.Scene({
+            triggerElement: "#trigger7",
+            duration: 2000,
+            triggerHook: 0
+          })
+
+          .setTween(panel3Scene2TLM)
+          .setPin("#panel3_scene2")
+          .addTo(SMController7)
+
+        function tigerRun() {
+          console.log("tigerRun");
+        }
+
+        //panel3 scene4 animation 
+        var SMController8 = new ScrollMagic.Controller();
+
+        var panel3Scene4TLM = new TimelineMax({
+          onComplete: panOut
+        });
+
+        var p3S4Layer0Images = $('#panel3_scene4-layer0 picture source, #panel3_scene4-layer0 img');
+
+        var p3S4Layer1Images = $('#panel3_scene4-layer1 picture source, #panel3_scene4-layer1 img');
+
+        panel3Scene4TLM
+          .fromTo(p3S4Layer0Images, 3, {
+            scaleX: 1.15,
+            scaleY: 1.15
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "+=0")
+          .add("end")
+          .fromTo(p3S4Layer1Images, 3, {
+            scaleX: 1.3,
+            scaleY: 1.3
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "end-=2")
+
+        var scene8 = new ScrollMagic.Scene({
+            triggerElement: "#trigger8",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel3Scene4TLM)
+          .setPin("#panel3_scene4")
+          .addTo(SMController8)
+
+        function panOut() {
+          console.log("panOut");
+        }
+
+        //panel3 scene6 animation
+        var SMController9 = new ScrollMagic.Controller();
+
+        var panel3Scene6TLM = new TimelineMax({
+          onComplete: valleyZoom
+        });
+
+        var p3S6Layer2Images = $('#panel3_scene6-layer2 picture source, #panel3_scene6-layer2 img');
+
+        var p3S6Layer3Images = $('#panel3_scene6-layer3 picture source, #panel3_scene6-layer3 img');
+
+        var p3S6Layer4Images = $('#panel3_scene6-layer4 picture source, #panel3_scene6-layer4 img');
+
+        panel3Scene6TLM
+          .fromTo(p3S6Layer2Images, 3, {
+            scaleX: 1.15,
+            scaleY: 1.15
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "+=0")
+          .add("end")
+          .fromTo(p3S6Layer3Images, 3, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, {
+            scaleX: 1,
+            scaleY: 1
+          }, "end-=3")
+          .fromTo(p3S6Layer4Images, 3, {
+            scaleX: 1.3,
+            scaleY: 1.3
+          }, {
+            scaleX: 1.1,
+            scaleY: 1.1
+          }, "end-=3")
+
+        var scene9 = new ScrollMagic.Scene({
+            triggerElement: "#trigger9",
+            duration: 2000,
+            triggerHook: 0
+          })
+
+          .setTween(panel3Scene6TLM)
+          .setPin("#panel3_scene6")
+          .addTo(SMController8)
+
+        function valleyZoom() {
+          console.log("valleyZoom");
+        }
+
+        //panel4 scene2 animation 
+        var SMController10 = new ScrollMagic.Controller();
+
+        var panel4Scene2TLM = new TimelineMax({
+          onComplete: tigerFight
+        });
+
+        var p4S2Layer1Images = $('#panel4_scene2-layer1 picture source, #panel4_scene2-layer1 img');
+
+        var p4S2Layer2Images = $('#panel4_scene2-layer2 picture source, #panel4_scene2-layer2 img');
+
+        var p4S2Layer3Images = $('#panel4_scene2-layer3 picture source, #panel4_scene2-layer3 img');
+
+        var p4S2Layer4Images = $('#panel4_scene2-layer4 picture source, #panel4_scene2-layer4 img');
+
+        panel4Scene2TLM
+          .to(p4S2Layer1Images, 3, {
+            scaleX: 1.1,
+            scaleY: 1.1
+          }, "+=0")
+          .add("end")
+          .fromTo(p4S2Layer2Images, 3, {
+            x: 50,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "end-=3")
+          .fromTo(p4S2Layer3Images, 3, {
+            x: 60,
+            y: 0
+          }, {
+            x: 0,
+            y: 0
+          }, "end-=3")
+          .fromTo(p4S2Layer4Images, 3, {
+            x: 100,
+            y: 0
+          }, {
+            x: -10,
+            y: 0
+          }, "end-=3")
+
+        var scene10 = new ScrollMagic.Scene({
+            triggerElement: "#trigger11",
+            duration: 2000,
+            triggerHook: 0
+          })
+
+          .setTween(panel4Scene2TLM)
+          .setPin("#panel4_scene2")
+          .addTo(SMController10)
+
+        function tigerFight() {
+          console.log("tigerFight");
+        }
+
+        //panel4 scene4 animation
+        var SMController11 = new ScrollMagic.Controller();
+
+        var panel4Scene4TLM = new TimelineMax({
+          onComplete: handsZoom
+        });
+
+        var p4S4Layer0Images = $('#panel4_scene4-layer0 picture source, #panel4_scene4-layer0 img');
+
+        var p4S4Layer1Images = $('#panel4_scene4-layer1 picture source, #panel4_scene4-layer1 img');
+
+        panel4Scene4TLM
+          .to(p4S4Layer0Images, 3, {
+            scaleX: 1.1,
+            scaleY: 1.1
+          }, "+=0")
+          .add("end")
+          .to(p4S4Layer1Images, 3, {
+            scaleX: 1.13,
+            scaleY: 1.13
+          }, "-=3")
+
+        var scene11 = new ScrollMagic.Scene({
+            triggerElement: "#trigger12",
+            duration: 2000,
+            triggerHook: 0.1
+          })
+
+          .setTween(panel4Scene4TLM)
+          .setPin("#panel4_scene4")
+          .addTo(SMController11)
+
+        function handsZoom() {
+          console.log("handsZoom");
+        }
+
+        //panel4 scene6 animation
+        var SMController12 = new ScrollMagic.Controller();
+
+        var panel4Scene6TLM = new TimelineMax({
+          onComplete: treeZoomOut
+        });
+
+        var p4S6Layer1Images = $('#panel4_scene6-layer1 picture source, #panel4_scene6-layer1 img');
+
+        var p4S6Layer2Images = $('#panel4_scene6-layer2 picture source, #panel4_scene6-layer2 img');
+
+        var p4S6Layer3Images = $('#panel4_scene6-layer3 picture source, #panel4_scene6-layer3 img');
+
+        panel4Scene6TLM
+          .fromTo(p4S6Layer1Images, 3, {
+            scaleX: 1.2,
+            scaleY: 1.2
+          }, {
+            scaleX: 1.01,
+            scaleY: 1.01
+          }, "+=0")
+          .add("end")
+          .fromTo(p4S6Layer2Images, 3, {
+            scaleX: 1.3,
+            scaleY: 1.3
+          }, {
+            scaleX: 1.03,
+            scaleY: 1.03
+          }, "end-=3")
+          .fromTo(p4S6Layer3Images, 3, {
+            scaleX: 1.35,
+            scaleY: 1.35
+          }, {
+            scaleX: 1.03,
+            scaleY: 1.03
+          }, "end-=3")
+
+        var scene11 = new ScrollMagic.Scene({
+            triggerElement: "#trigger13",
+            duration: 2500,
+            triggerHook: -0.1
+          })
+
+          .setTween(panel4Scene6TLM)
+          .setPin("#panel4_scene6")
+          .addTo(SMController11)
+
+        function treeZoomOut() {
+          console.log("treeZoomOut");
+        }
+
+        var canvas = document.querySelector('.snow');
+        var w = canvas.width = window.innerWidth;
+        var h = canvas.height = window.innerHeight;
+        var ctx = canvas.getContext('2d');
+
+
+
+        function Snowflake(x, y, s) {
+
+          this.x = x;
+          this.y = y;
+          this.s = s;
+
+
+          this.snowFall = function () {
+
+
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.arc(this.x, this.y += this.s, this.s, 0, Math.PI * 2);
+            ctx.fill();
+            if (this.y > w - this.s) {
+              this.y = Math.floor(Math.random() * -w);
+            }
+          }
+        };
+
+        var flakes = [];
+        for (var i = 0; i < 700; i++) {
+          var x = Math.floor(Math.random() * w);
+          var y = Math.floor(Math.random() * -w);
+          var s = Math.floor(Math.random() * 4);
+          flakes[i] = new Snowflake(x, y, s);
+        };
+
+        function update() {
+          requestAnimationFrame(update);
+          ctx.clearRect(0, 0, w, h);
+          for (var i = 0; i < flakes.length; i++) {
+            flakes[i].snowFall();
+          }
+        };
+
+        update();
+      });
+    </script>
+    <style>
+      .wrapper .row.list-bordered.list-vertical-bordered-items.list-data.gutter-top-fixed-4 {
+        margin-top: 0;
+      }
+
+      .wrapper .row.list-bordered.list-vertical-bordered-items.list-data.gutter-top-fixed-4 li {
+        min-height: 0;
+      }
+    </style>
+  </div>
+  <!-- RAILS_ENV: production | HOST: 429731-web5 -->
+</body>
+
+</html>
