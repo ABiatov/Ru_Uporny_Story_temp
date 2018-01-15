@@ -1,0 +1,1 @@
+# Ru_Uporny_Story_temp
