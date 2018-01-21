@@ -1,0 +1,32 @@
+/* style01.css строка 1. При удаление искажается отступы от текста в рамках. */
+
+p, h3 {border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}
+
+/* style01.css строка 33. При удаление искажается гарнитура шрифта*/
+body{background:#fff;color:#444;font:15px/1.6 OpenSansRegular, Helvetica, Arial, sans-serif;-webkit-font-smoothing:antialiased} 
+
+/* style01.css строка 39. При удаление искажается расположение и размер картинки с собакой и тенью тигра, и отступы вокруг картинок с фотоловушками */
+img{display:block;max-width:100%}
+
+/* style01.css строка 54, 56. При удаление искажается размер  шрифта */
+h2,.h2{font:20px/1.125 OpenSansRegular, Helvetica, Arial, sans-serif;margin-bottom:5px} 
+
+h3,.h3{font:bold 15px/1.33333333 OpenSansRegular, Helvetica, Arial, sans-serif;margin-bottom:2px} 
+
+/* style01.css строка 106, 108. При удаление искажается отображение надписи "Крутите колесо мышки, чтоб увидеть всю историю" */
+
+.hdr-centered{text-align:center}
+
+.hdr-important{text-transform:uppercase}
+
+/* style01.css строка 223. При удаление искажается отображение нескольких картинок */
+
+.contain:after,.row:after{clear:both;content:".";display:block;height:0;visibility:hidden} 
+
+/* style01.css строка 227. при его удалении явных изменений не происходит, но атрибут screen-reader в коде присутствет */
+.screen-reader{display:block !important;left:-9999px !important;position:absolute !important}
+
+/* style01.css строка 230, 232. при его удалении яскажается размер изображения в мобильной версии */
+.alt{display:block;overflow:hidden;text-indent:-9999px} ,
+
+.touch .alt{text-indent:100%;white-space:nowrap} 
